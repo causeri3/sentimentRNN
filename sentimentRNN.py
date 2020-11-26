@@ -36,7 +36,7 @@ for i in range(len(df[:,0])):
     print(results[i])
     print(i)
     
-#thus, run it in batches of 10 with 5 pauses
+#thus, run it in batches of 10 with 5 sec pause in between
 import time
     
 for i in range(len(df[:,0])):
@@ -51,7 +51,7 @@ for i in range(len(df[:,0])):
         print(i)
         
         
-#check if translation worked (trail and error for the batch size and seconds in loop above)
+#check if translation worked (trial and error for the batch size and seconds in loop above)
 results[436]
 translator.translate(df[436,0], dest="en").text
 results[298]
@@ -164,7 +164,7 @@ Y_test[1:50,:]
 #####TUNE MODEL#######################################################################################################################################################################################################################
 #weighting of classes improved model very efficiently
 #in this case the labelled data was biased towards the neutral class (human stamina)
-#therefore the metric recall is a good choice to tune for epochs
+#therefore the metric recall is a good choice to choose epochs
 
 class_weight = {0: 75.,
                 1: 1.,
@@ -203,7 +203,7 @@ plot_graphs(history, 'precision')
 model.save('Model1')
 Model1 = tf.keras.models.load_model('Model1')
 
-#get preddictions to compute confusion-matrix
+#get predictions to compute confusion-matrix
 
 predModel1 = Model1.predict(data[:,0:1123])
 

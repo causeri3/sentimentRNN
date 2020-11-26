@@ -51,7 +51,7 @@ for i in range(len(df[:,0])):
         print(i)
         
         
-#check if translation worked (trial and error for the batch size and seconds in loop above)
+#check if translation worked (trial and error for the batch size and seconds in loop above, it depends on the length of the longest comment)
 results[436]
 translator.translate(df[436,0], dest="en").text
 results[298]

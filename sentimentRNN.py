@@ -164,7 +164,7 @@ Y_test[1:50,:]
 #####TUNE MODEL#######################################################################################################################################################################################################################
 #weighting of classes improved model very efficiently
 #in this case the labelled data was biased towards the neutral class (human stamina)
-#therefore the metric recall is a good choice to choose epochs
+#therefore the metric recall is a good metric to choose epochs
 
 class_weight = {0: 75.,
                 1: 1.,
